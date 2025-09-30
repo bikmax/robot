@@ -1,0 +1,39 @@
+stages:
+  - test
+
+before_script:
+  - python -m venv venv
+  - source venv/bin/activate
+  - pip install --upgrade pip
+  - pip install -r requirements.txt
+
+test_api:
+  stage: test
+  script:
+    - robot -d results/api tests/api
+  artifacts:
+    when: always
+    paths:
+      - results/api
+
+test_web:
+  stage: test
+  script:
+    - robot -d results/web tests/ui_web
+  artifacts:
+    when: always
+    paths:
+      - results/web
+
+test_mobile:
+  stage: test
+  tags:
+    - android
+  script:
+    - appium --address 127.0.0.1 --port 4724 &
+    - sleep 10
+    - robot -d results/mobile tests/ui_mobile
+  artifacts:
+    when: always
+    paths:
+      - results/mobile

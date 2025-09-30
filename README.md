@@ -1,6 +1,7 @@
 # Robot Automation Project
 
-This project demonstrates my **SDET skills** in building a maintainable and scalable automation framework using **Robot Framework**, **Python**, **Selenium/Appium**, and custom libraries.  
+This project demonstrates my **SDET skills** in building a maintainable and scalable automation framework using **Robot Framework**, **Python**, **Selenium/Appium**
+
 It covers **Web UI**, **Mobile**, and **API** test automation with a clean structure, reusable components, and CI integration.
 
 ---
