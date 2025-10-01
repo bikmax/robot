@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Verify MockAPI users endpoint with generated users, update, delete, and cleanup
 Resource    ../resources/keywords/api/mockapi_users_keywords.robot
-Resource    ../resources/variables/mockapi_variables.robot
+Resource    ../resources/variables/api/mockapi_variables.robot
 Library     RequestsLibrary
 Library     FakerLibrary    
 Library     Collections    

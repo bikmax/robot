@@ -2,7 +2,7 @@
 Library    RequestsLibrary
 Library    FakerLibrary    locale=ru_RU
 Library    Collections    # Для Append To List
-Resource   ../resources/variables/mockapi_variables.robot    # Проверенный путь
+Resource   ../resources/variables/api/mockapi_variables.robot    
 
 *** Keywords ***
 Create Session To MockAPI
@@ -14,15 +14,15 @@ Generate Test Users
     @{user_ids}=    Create List
     FOR    ${i}    IN RANGE    ${count}
         ${name}=    FakerLibrary.Name
-        Log    Generated name: ${name}    # Для отладки
+        Log    Generated name: ${name}    
         ${user_data}=    Create Dictionary    name=${name}
         ${response}=    POST On Session    mockapi    ${USERS_ENDPOINT}    json=${user_data}    expected_status=201
         ${user_id}=    Set Variable    ${response.json()['id']}
         Append To List    ${user_ids}    ${user_id}
-        Log    Current user_ids: ${user_ids}    # Для отладки
+        Log    Current user_ids: ${user_ids}    
     END
-    Set Suite Variable    @{GENERATED_USER_IDS}    @{user_ids}    # Обновляем глобальную переменную
-    Log    Set suite variable GENERATED_USER_IDS: ${GENERATED_USER_IDS}    # Для отладки
+    Set Suite Variable    @{GENERATED_USER_IDS}    @{user_ids}    
+    Log    Set suite variable GENERATED_USER_IDS: ${GENERATED_USER_IDS}   
 
 Get User By ID
     [Arguments]    ${user_id}
@@ -49,7 +49,7 @@ Delete User By ID
 
 Delete Generated Users
     # Delete all generated users
-    Log    Deleting users with IDs: ${GENERATED_USER_IDS}    # Для отладки
+    Log    Deleting users with IDs: ${GENERATED_USER_IDS}    
     FOR    ${user_id}    IN    @{GENERATED_USER_IDS}
         Delete User By ID    ${user_id}
     END

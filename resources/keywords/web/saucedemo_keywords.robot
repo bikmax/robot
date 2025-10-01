@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 Library    Collections
 Resource   ../../page_objects/web/saucedemo_page.robot
-Resource   ../resources/variables/saucedemo_variables.robot
+Resource   ../resources/variables/web/saucedemo_variables.robot
 Resource   ../../../libraries/open_ai_lib.robot
 
 *** Keywords ***

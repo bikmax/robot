@@ -1,13 +1,14 @@
 {
   "platformName": "Android",
   "appium:platformVersion": "15",
-  "appium:deviceName": "emulator-5554",
+  "appium:deviceName": "emulator-5554", 
   "appium:udid": "emulator-5554",
   "appium:automationName": "UiAutomator2",
   "appium:appPackage": "io.appium.android.apis",
   "appium:appActivity": ".ApiDemos",
   "appium:autoGrantPermissions": true,
   "appium:newCommandTimeout": 600,
-  "appium:noReset": true,
-  "appium:fullReset": false
+  "appium:noReset": false,
+  "appium:fullReset": false,
+  "appium:forceAppLaunch": true
 }

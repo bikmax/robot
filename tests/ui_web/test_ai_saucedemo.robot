@@ -1,9 +1,9 @@
 *** Settings ***
 Library    SeleniumLibrary
 Library    Collections
-Resource   ../../resources/keywords/web/saucedemo_keywords.robot
+Resource   ../../../resources/keywords/web/saucedemo_keywords.robot
 Resource   ../../resources/page_objects/web/saucedemo_page.robot
-Resource   ../../resources/variables/saucedemo_variables.robot
+Resource   ../../resources/variables/web/saucedemo_variables.robot
 Resource   ../../../libraries/open_ai_lib.robot
 
 Suite Setup       Open Browser    ${SAUCE_URL}    chrome
