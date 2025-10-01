@@ -36,7 +36,7 @@ Install [APK](https://github.com/bikmax/robot/blob/main/android/apk/ApiDemos-deb
 ### Features
 
 - [Mobile UI tests (Appium / Android)](tests/ui_mobile/test_apidemos.robot)  
-- [Web UI test (Selenium)](tests/ui_web/test_wikipedia_languages.robot)  
+- Web UI tests (Selenium) [WIKI](tests/ui_web/test_wikipedia_languages.robot) |  [SAUCE](tests\ui_web\test_ai_saucedemo.robot)
 - [API tests (RequestsLibrary)](tests/api/test_mockapi_users.robot)  
 - [AI-powered Web UI tests (OpenAI)](tests/ui_web/test_ai_saucedemo.robot)
 
@@ -50,6 +50,7 @@ robot -d results tests/ui_mobile/test_apidemos.robot
 
 Web:
 robot -d results tests/ui_web/test_wikipedia_languages.robot
+robot -d results tests/ui_web/test_ai_saucedemo.robot
 
 API:
 robot -d results tests/api/test_mockapi_users.robot
